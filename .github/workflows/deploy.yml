@@ -1,3 +1,4 @@
+# Part of Zebroo GmbH. See LICENSE file for full copyright and licensing details (www.zebroo.de/license).
 name: deploy subversions 
 
 on:
@@ -16,7 +17,7 @@ jobs:
     concurrency:
       group: deploy-subversions-${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: true
-    uses: Odoo-Ninjas/git-workflows/.github/workflows/deploy_to_subversions.yml@v5
+    uses: zebroo-tools/git-workflows/.github/workflows/deploy_to_subversions.yml@v5
     secrets: inherit
     with:
       branches: "15.0:main 16.0:main 17.0:main"
